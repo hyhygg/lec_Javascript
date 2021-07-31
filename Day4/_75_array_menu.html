@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul.menu{
+      list-style: none;
+      border:1px solid black;
+      height:40px;
+      padding:20px;
+    }
+    ul.menu li{
+      display:block;
+      float:left;
+      padding:10px;
+      border:1px solid black;
+      margin-right:10px;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function(){
+      let menuData = "menu1, menu2, menu3, menu4, menu5";
+      let $menu = $(".menu");
+      // , 기준으로 분리해서 배열로 생성
+      let menuItems = menuData.split(",");  
+      for(let i=0;i<menuItems.length;i++){
+        let newMenuItem = "<li>" + menuItems[i]+"</li>";
+        $menu.append(newMenuItem);
+      }
+    });
+  </script>
+</head>
+<body>
+  <ul class="menu">
+    <li>메뉴1</li>
+  </ul>
+</body>
+</html>

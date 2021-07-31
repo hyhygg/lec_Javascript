@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+
+    a = 1;    // var a = 1;   window.a = 1;
+    // 변수 선언은 되었지만 값의 대입이 이루어지지 않아
+    // undefined로 초기ㅗ하 되어 있다. 데이터 타입 모르겠어
+    var b;
+    if(a==1){
+      var aaa = "홍길동";
+    }
+
+    function test(){
+      /* 함수 블록에 있는 변수를 지역변수
+      함수 내에서만 사용가능하고 함수 
+      밖에서는 존재하지 않는 변수*/
+      var bbb = "임꺽정";
+    }
+
+    document.write(aaa, "<br/>");
+    document.write(b, "<br/>");
+    document.write(bbb, "<br/>"); // Reference Error
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

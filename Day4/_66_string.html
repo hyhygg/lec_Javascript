@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #output{
+      width:400px;
+      height:200px;
+      text-align: center;
+      line-height: 200px;
+      vertical-align: middle;
+      border:2px solid black;
+      font-size: 50px;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function(){
+      let str = window.prompt("문자를 입력해주세요");
+      let $output = $("#output");
+      let index = 0;
+      let temp = "";
+      let timerID = setInterval(function(){
+        //index 위치의 1문자를 추출
+        let ch = str.charAt(index);
+        temp += ch;
+        $output.text(temp);
+        index++;
+        if(index >= str.length){
+          clearInterval(timerID);
+        }
+      }, 1000);
+    });
+  </script>
+</head>
+<body>
+  <div id="output"></div>
+</body>
+</html>

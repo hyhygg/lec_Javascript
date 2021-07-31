@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let users = ["홍길동","임꺽정","장길산","일지매","차돌바위"];
+        // 1. 배열 개수 알아내기
+        document.write("배열길이: " + users.length, "<br/><br/>");
+
+        // 2. 배열 요소 접근하기
+        for(let i = 0; i<users.length; i++){
+            let user = users[i];
+            document.write(i + "=" + user, "<br/>");
+        }
+
+        // 3. 배열 요소를 조합하기
+        let result0 = users.join();
+        document.write(result0, "<br/>");   // 기본: , 콤마
+        let result1 = users.join("");
+        document.write(result1, "<br/>");
+        let result2 = users.join("-");
+        document.write(result2, "<br/>");
+        let result3 = users.join("*#+");
+        document.write(result3, "<br/>");     
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

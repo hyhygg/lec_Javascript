@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #output {
+      width: 400px;
+      height: 200px;
+      text-align: center;
+      line-height: 200px;
+      vertical-align: middle;
+      border: 2px solid red;
+      font-size: 30px;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+    crossorigin="anonymous"></script>
+  <script>
+    // Ctrl + A(전체선택), Ctrl+K, F(코드 정렬)
+    $(document).ready(function () {
+      let $output = $("#output");
+      let objDate = new Date();
+      let year = objDate.getFullYear(); // 년
+      let month = objDate.getMonth();   // 월(0~11)
+      let date = objDate.getDate();     // 일
+      let day = objDate.getDay();       // 요일(0~6)
+
+      let arrayDay = ["일", "월", "화", "수", "목", "금", "토"];
+
+      $output.text(year +"년 " + (month+1) +"월 " +
+               date + "일 " +  arrayDay[day] + "요일");
+    });
+  </script>
+</head>
+
+<body>
+  <div id="output">여기에 시간 정보 출력</div>
+</body>
+
+</html>

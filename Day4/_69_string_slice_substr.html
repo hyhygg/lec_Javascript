@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // slice(인덱스이상, 인덱스미만);
+        // substr(인덱스부터, 몇 개 글자);
+        let data = "홍길동임꺽정";
+        let result = data.slice(0, 3) + "-" +
+                        data.slice(3, data.length);
+        document.write(result, "<br/>");
+
+        let result1 = data.substr(0, 3) + "-" +
+                        data.substr(3, data.length-3);
+        document.write(result1, "<br/>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
